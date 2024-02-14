@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://fit:fit123@devconnector2.l2blskf.mongodb.net/"
+    "mongoURI": "mongodb+srv://fit:fit123@devconnector2.l2blskf.mongodb.net/",
+    "jwtSecret":"mysecrettoken"
 }
