@@ -1,4 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://fit:fit123@devconnector2.l2blskf.mongodb.net/",
-    "jwtSecret":"mysecrettoken"
+    "mongoURI": 'mongodb+srv://fitsum:fitsum@cluster0.4vdi0rs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    "jwtSecret":"mysecrettoken",
+    "githubClientId":"aba01cf2be3685588453",
+    "githuSecret":"269d731ae9c58f02fec1aca1e36ebffb1593f142"
 }
