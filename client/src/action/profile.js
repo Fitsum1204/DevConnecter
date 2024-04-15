@@ -15,7 +15,7 @@ import {
 //Get current users profile
 export const getCurrentProfile = () => async dispatch => {
     try {
-        const res = await axios.get('http://localhost:3000/api/profile/me');
+        const res = await axios.get('https://devconnecter-backend.onrender.com/api/profile/me');
         dispatch({
             type: GET_PROFILE,
             payload: res.data
@@ -33,7 +33,7 @@ export const getCurrentProfile = () => async dispatch => {
 export const getProfile = () => async dispatch => {
     dispatch({type: CLEAR_PROFILE})
     try {
-        const res = await axios.get('http://localhost:3000/api/profile');
+        const res = await axios.get('https://devconnecter-backend.onrender.com/api/profile');
         dispatch({
             type: GET_PROFILES,
             payload: res.data
@@ -50,7 +50,7 @@ export const getProfile = () => async dispatch => {
 export const getProfileById = user_id => async dispatch => {
     
     try {
-        const res = await axios.get(`http://localhost:3000/api/profile/user/${user_id}`);
+        const res = await axios.get(`https://devconnecter-backend.onrender.com/api/profile/user/${user_id}`);
         dispatch({
             type: GET_PROFILE,
             payload: res.data
