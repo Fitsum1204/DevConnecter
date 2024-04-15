@@ -1,5 +1,5 @@
 import { Router } from "express";
-import authr from '../../middleware/authr.js';
+import authr from "../../middleware/authr.js";
 import User from '../../models/Users.js';
 import { check, validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';

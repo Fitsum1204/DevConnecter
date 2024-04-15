@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check, validationResult } from 'express-validator';
-import authr from '../../middleware/authr.js';
+import authr from "../../middleware/authr.js";
 import User from '../../models/Users.js';
 import Profile from '../../models/Profile.js';
 import Post from '../../models/Post.js';

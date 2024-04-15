@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import User from '../../models/Users.js';
 import Profile from '../../models/Profile.js';
 import Post from '../../models/Post.js';
-import authr from '../../middleware/authr.js';
+import authr from "../../middleware/authr.js";
 const posts = Router();
 
 //@route Post  api/post
