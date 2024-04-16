@@ -16,7 +16,7 @@ export const loadUser = () => async dispatch => {
         setAuthToken(localStorage.token)
     }
     try {
-        const res =await axios.get('http://localhost:3000/api/auth');
+        const res =await axios.get('https://devconnecter-backend.onrender.com/api/auth');
         dispatch({
             type:USER_LOADED,
             payload:res.data
@@ -39,7 +39,7 @@ export const register = ({name,email,password})=>async dispatch => {
     const body = JSON.stringify({name,email,password});
  
     try {
-        const res = await axios.post('http://localhost:3000/api/users',body,config);
+        const res = await axios.post('https://devconnecter-backend.onrender.com/api/users',body,config);
        console.log(res.data.token)
        console.log("REGISTER_SUCCESS")
         dispatch({ 
@@ -76,7 +76,7 @@ async dispatch => {
     const body = JSON.stringify({email, password});
     console.log(body)
     try {
-        const res = await axios.post('http://localhost:3000/api/auth',body,config);
+        const res = await axios.post('https://devconnecter-backend.onrender.com/api/auth',body,config);
     
        console.log(body)
        console.log("Login_SUCCESS")

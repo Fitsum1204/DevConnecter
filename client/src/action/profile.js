@@ -67,7 +67,7 @@ export const getProfileById = user_id => async dispatch => {
 export const getGithubRepos = username => async dispatch => {
    
     try {
-        const res = await axios.get(`http://localhost:3000/api/profile/github/${username}`);
+        const res = await axios.get(`https://devconnecter-backend.onrender.com/api/profile/github/${username}`);
         dispatch({
             type: GET_REPOS,
             payload: res.data
@@ -89,7 +89,7 @@ export const createProfile = (FormData,edit=false)=> async (dispatch) => {
                 'Content-Type':'application/json'
             }
         } 
-        const res = await axios.post('http://localhost:3000/api/profile',FormData,config);
+        const res = await axios.post('https://devconnecter-backend.onrender.com/api/profile',FormData,config);
         dispatch({
             type: GET_PROFILE,
             payload: res.data
@@ -118,7 +118,7 @@ export const addExpriance = (FormData ,history) => async dispatch => {
                 'Content-Type':'application/json'
             }
         } 
-        const res = await axios.put('http://localhost:3000/api/profile/experience',FormData,config);
+        const res = await axios.put('https://devconnecter-backend.onrender.com/api/profile/experience',FormData,config);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -149,7 +149,7 @@ export const addEducation = (FormData ,history) => async dispatch => {
                 'Content-Type':'application/json'
             }
         } 
-        const res = await axios.put('http://localhost:3000/api/profile/education',FormData,config);
+        const res = await axios.put('https://devconnecter-backend.onrender.com/api/profile/education',FormData,config);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -176,7 +176,7 @@ export const addEducation = (FormData ,history) => async dispatch => {
 
 export const deleteExperience = id => async dispatch => {
     try {
-        const res = await axios.delete(`http://localhost:3000/api/profile/experience/${id}`);
+        const res = await axios.delete(`https://devconnecter-backend.onrender.com/api/profile/experience/${id}`);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -195,7 +195,7 @@ export const deleteExperience = id => async dispatch => {
 
 export const deleteEducation = id => async dispatch => {
     try {
-        const res = await axios.delete(`http://localhost:3000/api/profile/education/${id}`);
+        const res = await axios.delete(`https://devconnecter-backend.onrender.com/api/profile/education/${id}`);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data
@@ -216,7 +216,7 @@ export const deleteEducation = id => async dispatch => {
 export const delteAccount = () => async dispatch => {
     if(window.confirm('Are you sure?This can Not be undone!')){
     try {
-        const res = await axios.delete(`http://localhost:3000/api/profile`);
+        const res = await axios.delete(`https://devconnecter-backend.onrender.com/api/profile`);
         dispatch({type: CLEAR_PROFILE});
         dispatch({type: ACCOUNT_DELETED});
         dispatch(setAlert('Your account has been permanently deleted','success'))
