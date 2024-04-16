@@ -13,7 +13,7 @@ connectDB();
 //Init Middlware
 app.use(express.json({extended: false}));
 app.use(cors({
-    origin: 'http://localhost:8000' // Allow requests from frontend origin
+    origin: 'https://devconnecter-backend.onrender.com' // Allow requests from frontend origin
   }));
 app.get('/' ,cors(),(req,res) => res.send('API Running'));
 
