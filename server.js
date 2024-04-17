@@ -7,13 +7,17 @@ import posts from './routers/api/post.js';
 import cors from 'cors'
 const app = express();
 
+
+res.setHeader('Access-Control-Allow-Origin', 'https://devconnecter-woho.onrender.com');
+
+
 //connect database
 connectDB();
 
 //Init Middlware
 app.use(express.json({extended: false}));
 app.use(cors({
-    origin: 'https://devconnecter-backend.onrender.com' // Allow requests from frontend origin
+    origin: 'https://devconnecter-woho.onrender.com' // Allow requests from frontend origin
   }));
 app.get('/' ,cors(),(req,res) => res.send('API Running'));
 
