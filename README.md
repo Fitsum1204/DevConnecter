@@ -7,7 +7,7 @@ This project is a full-stack web application built with the MERN stack (MongoDB,
 * User registration and login
 * Creating and viewing developer profiles
 * commenting on developers' discussion
-*  
+   
 ## Technologies Used
 
 * Frontend: React.js
