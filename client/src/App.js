@@ -54,7 +54,7 @@ return (
           <Route element= {<PrivateRoute component={AddEducation}/>} exact path="/add-education" />
           <Route element= {<PrivateRoute component={Posts}/>} exact path="/posts" />
           <Route element= {<PrivateRoute component={Post}/>} exact path="/posts/:id" />
-          <Route path="/*" Component={NotFound} />
+          
           </Routes>
            
           
