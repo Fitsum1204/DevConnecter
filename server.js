@@ -8,7 +8,7 @@ import cors from 'cors'
 const app = express();
 
 
-res.setHeader('Access-Control-Allow-Origin', 'https://devconnecter-woho.onrender.com');
+//res.setHeader('Access-Control-Allow-Origin', 'https://devconnecter-woho.onrender.com');
 
 
 //connect database
